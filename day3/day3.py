@@ -1,19 +1,7 @@
-import os
+from common.utils import load_data
 from typing import Iterable, Generator, List
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-def load_data(file_path: os.PathLike = None) -> Generator:
-    """
-    Return a generator of each line in the input file
-    """
-
-    if not file_path:
-        file_path = os.path.join(os.path.dirname(__file__), 'input/input3.txt')
-
-    with open(file_path) as f:
-        for line in f.readlines():
-            yield line
 
 
 def split_string_in_half(sequence: str) -> List[str]:

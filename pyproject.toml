@@ -5,6 +5,10 @@ description = "Advent of code for 2022"
 authors = ["Your Name <you@example.com>"]
 license = "MIT"
 
+packages = [
+    { include = "common" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.10"
 numpy = "^1.23.5"
@@ -18,9 +22,11 @@ pytest = "^7.2.0"
 [tool.pytest.ini_options]
 pythonpath = [
     ".",
+    "common",
     "day1",
     "day2",
-    "day3"
+    "day3",
+    "day4"
     ]
 
 [build-system]

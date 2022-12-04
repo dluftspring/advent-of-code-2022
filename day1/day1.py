@@ -1,17 +1,6 @@
 import os
 from typing import Iterable, Generator
-
-def load_data(file_path: os.PathLike = None) -> Generator:
-    """
-    Return a generator of each line in the input file
-    """
-
-    if not file_path:
-        file_path = os.path.join(os.path.dirname(__file__), 'input/input1.txt')
-
-    with open(file_path) as f:
-        for line in f.readlines():
-            yield line
+from common.utils import load_data
 
 def count_calories_per_elf(data: Iterable) -> int:
     """

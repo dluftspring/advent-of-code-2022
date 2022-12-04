@@ -1,17 +1,5 @@
-import os
+from common.utils import load_data
 from typing import Iterable, Generator, List
-
-def load_data(file_path: os.PathLike = None) -> Generator:
-    """
-    Return a generator of each line in the input file
-    """
-
-    if not file_path:
-        file_path = os.path.join(os.path.dirname(__file__), 'input/input2.txt')
-
-    with open(file_path) as f:
-        for line in f.readlines():
-            yield line
 
 def get_total_score(data: Iterable, strategy: str) -> List[int]:
 

@@ -1,3 +1,4 @@
+import os
 from day3 import (
     load_data,
     calculate_total_priority_by_line,
@@ -11,14 +12,14 @@ def test_calculate_total_priority_by_line():
     """
     Test total priority calculation
     """
-    data = load_data('tests/test-input.txt')
+    data = load_data(os.path.join(os.path.dirname(__file__), 'test-input.txt'))
     assert calculate_total_priority_by_line(data) == 157
 
 def test_calculate_total_priority_by_group():
     """
     Test total priority calculation
     """
-    data = load_data('tests/test-input.txt')
+    data = load_data(os.path.join(os.path.dirname(__file__), 'test-input.txt'))
     assert calculate_total_priority_by_group(data) == 70
 
 def test_split_string_in_half():
@@ -31,7 +32,7 @@ def test_find_matched_characters():
     """
     Test finding matching characters in two string sequences
     """
-    data = load_data('tests/test-input.txt')
+    data = load_data(os.path.join(os.path.dirname(__file__), 'test-input.txt'))
     output_to_check = []
     for line in data:
         sequence_a, sequence_b = split_string_in_half(line.strip())
