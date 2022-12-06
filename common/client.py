@@ -63,4 +63,4 @@ class AdventOfCodeClient(object):
         Process response from advent of code and return the message of
         success or failure contained in the html tag
         """
-        print(response, flush=True)
+        print(response.text, flush=True)
